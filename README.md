@@ -1,6 +1,6 @@
 # Project Title
 
-Write a 1-2 sentences that quickly and clearly convey what your repo is for.
+Pokemon: What do their stats say?
 
 ## Overview
 
@@ -20,4 +20,4 @@ Be sure to list where you got any data used within the project. Be sure to ackno
 
 ## Authors
 
-Give information about who are the authors of the project and how people can get in touch if they have questions.
+Sid Tekumalla, Zachary Smith, Andrew
