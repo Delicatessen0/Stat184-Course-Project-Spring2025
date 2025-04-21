@@ -21,4 +21,4 @@ Source: https://www.kaggle.com/datasets/rzgiza/pokdex-for-all-1025-pokemon-w-tex
 
 ## Authors
 
-Sid Tekumalla, Zachary Smith, Andrew
+Sid Tekumalla, Zachary Smith, Andrew Bartnikowski
