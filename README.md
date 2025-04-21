@@ -17,6 +17,7 @@ Use this section to explain the structure of your repo. This should help visitor
 ## Data Sources and Acknowledgements
 
 Be sure to list where you got any data used within the project. Be sure to acknowledge any one whose work or elements you're drawing upon.
+Source: https://www.kaggle.com/datasets/rzgiza/pokdex-for-all-1025-pokemon-w-text-description
 
 ## Authors
 
