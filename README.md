@@ -1,10 +1,10 @@
-# Project Title
+# Pokemon: What their Stats say
 
-Pokemon: What do their stats say?
+An look at the relationship between Pokemons' different stats
 
 ## Overview
 
-Expand on those introductory sentences with a brief but informative description of your project's purpose and goals. This section should help visitors decide whether they should dig deeper into your repo/project.
+We wish to analyze the relationship between the combat stats of Pokemon: attack, defense, special attack, special defense, hp, and speed. Our goal is to see if a comparatively higher or lower value in one area gives any indication as to the value of another, and how these interactions allow for specific archetypes - such as a fast "glass cannon", or a bulky "defender".  
 
 ### Interesting Insight
 
@@ -16,7 +16,7 @@ Use this section to explain the structure of your repo. This should help visitor
 
 ## Data Sources and Acknowledgements
 
-Be sure to list where you got any data used within the project. Be sure to acknowledge any one whose work or elements you're drawing upon.
+Thank you to Kaggle for listing the following dataset.
 Source: https://www.kaggle.com/datasets/rzgiza/pokdex-for-all-1025-pokemon-w-text-description
 
 ## Authors
