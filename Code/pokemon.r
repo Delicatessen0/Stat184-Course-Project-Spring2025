@@ -3,18 +3,21 @@
 
 
 
-# Look at stat distributions by type in a table
+# Look at stat distributions by type in a table (Zach)
 
 
 
 
 
 
-# Make a scatterplot, with each point being a Pokemon, of attack/speed 
+
+# Make a combined scatterplot, with each point being a Pokemon, of attack/speed and defense/hp (Andrew)
 
 
 
 
 
 
-# Make a scatterplot, with each point being a Pokemon, of defense/hp
+
+
+# Make a line graph of Pokemon ID vs their total sum of stats (SID)
