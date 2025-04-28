@@ -18,6 +18,7 @@ Use this section to explain the structure of your repo. This should help visitor
 
 Thank you to Kaggle for listing the following dataset.
 Source: https://www.kaggle.com/datasets/rzgiza/pokdex-for-all-1025-pokemon-w-text-description
+Supplemental dataset via Kaggle: https://www.kaggle.com/datasets/ulrikthygepedersen/pokemon-stats
 
 ## Authors
 
