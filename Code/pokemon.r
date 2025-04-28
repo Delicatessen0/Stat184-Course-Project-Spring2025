@@ -67,13 +67,9 @@ library(tidyr)
 library(ggplot2)
 
 # Import the file from its website
-pokemon.total <- read.csv(
-  file = "https://www.kaggle.com/datasets/rzgiza/pokdex-for-all-1025-pokemon-w-text-description",
-  header = TRUE,
-  sep = ","
-)
+pokemon.total <- read.csv("~/Documents/GitHub/Stat184-Course-Project-Spring2025/total-pokemon.csv")
 
-
+# Trim the data
 reducedFrame <- total.pokemon %>%
   # Remove unwanted columns
   select(-c("V6","V7","V8","V9","V10","V11")) %>%
