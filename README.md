@@ -1,14 +1,20 @@
-# Pokemon: What their Stats say
+Describe the provenance of your data. That is, where did you get the data, who collected the data, for what purpose, who/what make up the cases.(DONE)
+ Explain how your data meet the FAIR and/or CARE Principles.
+ Describe what attributes you'll focus your analysis on (mention if they are part of your data sets or if you created them out of your data sets).
+You should properly cite any work you reference (including data) according to your choice of citation style. We've included files for APA7 and MLA9 as part of this template. If you want to use a different citation style, you will need download the CSL file from the Zotero Style Respository and include it in your team's repo.
 
-An look at the relationship between Pokemons' different stats
+
+# Pokemon: Stats Choose You!
+
+Analyzing the relationship between Pokemons' different stats and what they say.
 
 ## Overview
 
-We wish to analyze the relationship between the combat stats of Pokemon: attack, defense, special attack, special defense, hp, and speed. Our goal is to see if a comparatively higher or lower value in one area gives any indication as to the value of another, and how these interactions allow for specific archetypes - such as a fast "glass cannon", or a bulky "defender".  
+We wish to analyze the relationship between the combat stats of Pokemon, from the game franchise of the same name: attack, defense, special attack, special defense, hp (health points), and speed. Our goal is to see if a comparatively higher or lower value in one area gives any indication as to the Pokemon's type, generation, or to the value of another stat. In doing so we find identify traits to different types, check for "power creep" - that is, Pokemon growing stronger with each new generation - and correlations between pairs of stats.
 
-### Interesting Insight
+## Interesting Insight
 
-This is optional but highly recommended. You'll include one interesting insight from your project as part of the README. This insight is most effective when you include a visual. Keep in mind that this visual must be included as an image file (e.g., JPG, PNG, etc.). You can export plots created with `{ggplot2}` by using the function `ggsave`.
+One insight we found is that there was no significant power creep among Pokemon. It and others will be elaborated upon in the qmd file.
 
 ## Repo Structure
 
@@ -16,9 +22,14 @@ Use this section to explain the structure of your repo. This should help visitor
 
 ## Data Sources and Acknowledgements
 
-Thank you to Kaggle for listing the following dataset.
+Thank you to Kaggle for listing the following dataset, collected by Robert Giza.
 Source: https://www.kaggle.com/datasets/rzgiza/pokdex-for-all-1025-pokemon-w-text-description
 Supplemental dataset via Kaggle: https://www.kaggle.com/datasets/ulrikthygepedersen/pokemon-stats
+
+In our Source dataset, each case consists of a single pokemon with their ID, name, height (decimeters), weight (hectograms), hp, attack, defense, special attack, special defense, and speed values. There are a total of 1025 cases (corresponding to 1025 current Pokemon). The data is located in total-pokemon.csv.
+
+The Supplementary dataset is similar in that each case represents a Pokemon, with 1025 cases. But it also records additional columns for type, evo_set (showing if two pokemon are in the same evolution "family"), and their pokedex description. This data can be found in pokedex.csv.
+
 
 ## Authors
 
