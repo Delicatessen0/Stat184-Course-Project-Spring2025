@@ -1,7 +1,5 @@
 # List the needed visualizations here, as a comment. Each member will tackle a visualization independently, then post the code here.
 #data wrangling using the total/type dataset and the pokedex dataset (Andrew)
-
-# Look at stat distributions by type in a table (Zach)
 library(stringr)
 library(dplyr)
 library(tidyr)
@@ -19,7 +17,7 @@ Total <- Total %>%
 Combined <- left_join(Pokedex, Total, by = "name")
 View(Combined)
 
-
+# Look at stat distributions by type in a table (Zach)
 
 # Make a combined scatterplot, with each point being a Pokemon, of attack/speed and defense/hp (Andrew)
 library(ggplot2)
