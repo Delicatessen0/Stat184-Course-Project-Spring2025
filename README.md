@@ -1,12 +1,3 @@
-Describe the provenance of your data. That is, where did you get the data, who collected the data, for what purpose, who/what make up the cases. (DONE)
-
-Explain how your data meet the FAIR and/or CARE Principles. (DONE)
-
-Describe what attributes you'll focus your analysis on (mention if they are part of your data sets or if you created them out of your data sets). (DONE) 
-
-You should properly cite any work you reference (including data) according to your choice of citation style. We've included files for APA7 and MLA9 as part of this template. If you want to use a different citation style, you will need download the CSL file from the Zotero Style Respository and include it in your team's repo.
-
-
 # Pokemon: Stats Choose You!
 
 Analyzing the relationship between Pokemons' different stats and what they say.
