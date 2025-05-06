@@ -19,6 +19,11 @@ As for CARE principles, the nature of the code means it has no significant effec
 
 One insight we found is that there was no significant power creep among Pokemon. It and others will be elaborated upon in the qmd file.
 
+Other helpful inights were found as far as specific pokemon and how closely certain stats compare to other stats. 
+Specifically, from the analysis we  found Attack and Speed were quite closely correlated. While it is not a perfect indicator, generally the higher speed indicates higher attack damage. On the other hand, Defense and HP were more losely correlated, but upon a breif look of the plot, one can guess that the higher the defense rating the lower the HP. Which is not the case for all, mostly not the case for those with low damgage rating.
+
+
+
 ## Repo Structure
 
 Use this section to explain the structure of your repo. This should help visitors quickly figure out where they should look to find certain elements. Further, you can use this space to highlight and briefly explain important/key files in the repo.
