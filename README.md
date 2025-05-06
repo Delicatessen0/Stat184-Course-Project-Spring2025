@@ -22,7 +22,7 @@ One insight we found is that there was no significant power creep among Pokemon.
 Other helpful inights were found as far as specific pokemon and how closely certain stats compare to other stats. 
 Specifically, from the analysis we  found Attack and Speed were quite closely correlated. While it is not a perfect indicator, generally the higher speed indicates higher attack damage. On the other hand, Defense and HP were more losely correlated, but upon a breif look of the plot, one can guess that the higher the defense rating the lower the HP. Which is not the case for all, mostly not the case for those with low damgage rating.
 
-
+![Image](https://github.com/user-attachments/assets/e9afc096-5e7c-4931-8c90-9ddee6a5cdf8)
 
 ## Repo Structure
 
