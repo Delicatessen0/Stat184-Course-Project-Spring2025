@@ -26,12 +26,15 @@ Specifically, from the analysis we  found Attack and Speed were quite closely co
 
 ## Repo Structure
 
-Use this section to explain the structure of your repo. This should help visitors quickly figure out where they should look to find certain elements. Further, you can use this space to highlight and briefly explain important/key files in the repo.
+This is the readme file you are in now. This gives a breif introduction into our porject and quick insight into our findings. 
+In the repository we have two data sets, pokedex.csv is our main data set that contains all neccessary pokemon stats and info. Our supplementary data set, total-pokemon.csv, makes our analysis cleaner and easier having divided pokemon types and total score for each pokemon which is helpful. 
+In the code folder, there lies a pokemon.r file which is all of our data wrangling and analysis. The last main component you should know about is the qmd file in the repository that gives you a full report along with narration and visualizations of the analysis.
 
 ## Acknowledgements
 
 Thank you to Kaggle for listing the following dataset, collected by Robert Giza.
 Source: https://www.kaggle.com/datasets/rzgiza/pokdex-for-all-1025-pokemon-w-text-description
+
 Supplemental dataset via Kaggle: https://www.kaggle.com/datasets/ulrikthygepedersen/pokemon-stats
 
 ## Data Sources
