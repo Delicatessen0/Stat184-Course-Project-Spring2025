@@ -27,6 +27,9 @@ The Supplementary dataset is similar in that each case represents a Pokemon, wit
 
 Code Appendix
 ## Data wrangling using the total/type dataset and the pokedex dataset
+
+In this first table, we broke down the stats based on typing. It became clear that the "water" type was the most commonly used. As for stats, we found slight differences among each type. For example, the "fire" and "ground" types had the highest mean attack values, while the "flying" and "psychic" types have the highest mean speed values. It should be noticed, however, that these differences are relatively small, and that stats among the types are for the most part balanced.
+
 ```{r}
 library(stringr)
 library(dplyr)
@@ -85,6 +88,8 @@ print(stat_summary_combined)
 
 
 ## Combined scatterplot, with each point being a Pokemon, of attack/speed and defense/hp
+
+
 ```{r}
 library(ggplot2)
 library(patchwork)
