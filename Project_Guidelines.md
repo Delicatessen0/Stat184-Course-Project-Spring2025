@@ -47,9 +47,9 @@ We present the guidelines as a checklist in this file. This means that your team
 - [X] Read in your data and perform any necessary data tidying, wrangling, and cleaning.
 - [ ] Conduct Exploratory Data Analysis.
 - [ ] Prepare a reproducible report.
-  - [ ] Use a QMD file; the output type is PDF.
-  - [ ] The report should be well organized with section headings.
-  - [ ] Code should __only__ be found in a Code Appendix at the end for a PDF, not in the body of your report.
+  - [X] Use a QMD file; the output type is PDF.
+  - [X] The report should be well organized with section headings.
+  - [X] Code should __only__ be found in a Code Appendix at the end for a PDF, not in the body of your report.
     - __TIP!__ The following code chunk can be added to a QMD file and will automatically build a section of code.
 ````
       ```{r codeAppend, ref.label=knitr::all_labels(), echo=TRUE, eval=FALSE}
@@ -58,13 +58,13 @@ We present the guidelines as a checklist in this file. This means that your team
   - [X] Describe the provenance of your data. That is, where did you get the data, who collected the data, for what purpose, who/what make up the cases.
   - [X] Explain how your data meet the FAIR and/or CARE Principles.
   - [X] Describe what attributes you'll focus your analysis on (mention if they are part of your data sets or if you created them out of your data sets).
-  - [ ] Create multiple data visualizations (tables and figures) that assist both the team and readers in understanding the data.
-    - [ ] Data visualizations should show a variety of your skills and geometries.
+  - [X] Create multiple data visualizations (tables and figures) that assist both the team and readers in understanding the data.
+    - [X] Data visualizations should show a variety of your skills and geometries.
     - [ ] __Optional__: If your explorations and data make sense to do so, try creating a map.
     - [ ] Data visualizations should be appropriately sized--not too small and not too big.
     - [ ] Figures and Tables should have appropriate captions and appropriately cross-referenced in the body of your report.
     - [ ] Your team must produce at least one table that is *not* a display of raw data or a listing of data cases or columns.
-    - [ ] Your team must produce at least one plot/graph.
+    - [X] Your team must produce at least one plot/graph.
     - [ ] There should be narrative text helping readers to better understand what each visualization helps them to learn about the data and context.
   - [ ] Your report should contain narrative text (beyond explaining tables and figures) that explains the overall data story or context and helps the reader make sense of what is going on. That is, Take the reader on a journey.
   - [ ] __Optional:__ For those who want to challenge themselves further, feel free to include a section on using other statistical methods such as hypothesis testing, regression, ANOVA, or machine learning--see Chapter 18 of the Data Computing eBook. Keep in mind that this will not grant your group any extra credit.
