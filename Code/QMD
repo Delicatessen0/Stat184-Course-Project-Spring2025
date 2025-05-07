@@ -1,0 +1,155 @@
+---
+title: "Stat184 Project - Pokemon Analysis"
+authors: Andrew Bartnikowski, Zachary Smith, Sid
+format: pdf
+date: 5/7/2025
+---
+Overview
+We wish to analyze the relationship between the combat stats of Pokemon, from the game franchise of the same name: attack, defense, special attack, special defense, hp (health points), and speed. Our goal is to see if a comparatively higher or lower value in one area gives any indication as to the Pokemon's type, generation, or to the value of another stat. In doing so we find identify traits to different types, check for "power creep" - that is, Pokemon growing stronger with each new generation - and correlations between pairs of stats.
+
+FAIR / CARE Principles
+- Findable – Data is publicly accessible on Kaggle
+- Accessible – Data can be downloaded as a standard csv file
+- Interoperable – Being a csv file, the data can be operated on by virtually every type of code system
+- Reusable – The Data carries a number of different columns which can be analyzed to test numerous hypothesis
+As for CARE principles, the nature of the code means it has no significant effect on Indigenous peoples of communities, nor could it be used to threaten their rights and values. Regardless, we made sure to use the data ethically out of respect to the Pokemon franchise.
+
+Acknowledgements
+Thank you to Kaggle for listing the following dataset, collected by Robert Giza. Source: https://www.kaggle.com/datasets/rzgiza/pokdex-for-all-1025-pokemon-w-text-description
+
+Supplemental dataset via Kaggle: https://www.kaggle.com/datasets/ulrikthygepedersen/pokemon-stats
+
+Data Sources
+In our Source dataset, each case consists of a single pokemon with their ID, name, height (decimeters), weight (hectograms), hp, attack, defense, special attack, special defense, and speed values. There are a total of 1025 cases (corresponding to 1025 current Pokemon). The data is located in total-pokemon.csv.
+
+The Supplementary dataset is similar in that each case represents a Pokemon, with 1025 cases. But it also records additional columns for type, evo_set (showing if two pokemon are in the same evolution "family"), and their pokedex description. This data can be found in pokedex.csv.
+
+Code Appendix
+##Data wrangling using the total/type dataset and the pokedex dataset
+```{r}
+library(stringr)
+library(dplyr)
+library(tidyr)
+Total <- read.csv("~/Documents/GitHub/Stat184-Course-Project-Spring2025/total-pokemon.csv")
+Pokedex <- read.csv("~/Documents/GitHub/Stat184-Course-Project-Spring2025/pokedex.csv")
+
+Pokedex$name <- str_to_title(Pokedex$name)
+
+Pokedex <- Pokedex %>% 
+  dplyr::select(-c(11,13))
+
+Total <- Total %>% 
+  dplyr::select(2,3,4,5)
+
+Combined <- left_join(Pokedex, Total, by = "name")
+View(Combined)
+```
+##Stat distributions by type in a table
+```{r}
+# Load necessary libraries
+library(dplyr)
+library(readr)
+library(tidyr)
+
+# Read the data
+total_pokemon <- read.csv("~/Documents/GitHub/Stat184-Course-Project-Spring2025/total-pokemon.csv")
+
+# Combine type1 and type2 into one 'type' column
+stat_summary_combined <- total_pokemon %>%
+  select(name, hp, attack, defense, speed, type1, type2) %>%
+  pivot_longer(cols = c(type1, type2), names_to = "type_slot", values_to = "type") %>%
+  filter(!is.na(type)) %>%
+  group_by(type) %>%
+  summarise(
+    count = n(),
+    mean_hp = mean(hp, na.rm = TRUE),
+    mean_attack = mean(attack, na.rm = TRUE),
+    mean_defense = mean(defense, na.rm = TRUE),
+    mean_speed = mean(speed, na.rm = TRUE),
+    min_hp = min(hp, na.rm = TRUE),
+    max_hp = max(hp, na.rm = TRUE),
+    min_attack = min(attack, na.rm = TRUE),
+    max_attack = max(attack, na.rm = TRUE),
+    min_defense = min(defense, na.rm = TRUE),
+    max_defense = max(defense, na.rm = TRUE),
+    min_speed = min(speed, na.rm = TRUE),
+    max_speed = max(speed, na.rm = TRUE)
+  ) %>%
+  arrange(desc(count))
+
+# Print the combined summary table
+print(stat_summary_combined)
+
+```
+
+
+##Combined scatterplot, with each point being a Pokemon, of attack/speed and defense/hp
+```{r}
+library(ggplot2)
+library(patchwork)
+View(Pokedex)
+
+att_plot <- ggplot(
+  data = Combined,
+  mapping = aes(
+    x = attack,
+    y = speed
+  ) 
+) +
+  geom_point(size = 2) +
+  labs(
+    x = "Attack",
+    y = "Speed",
+    title = "Pokemon: Attack Power vs. Speed"
+  ) + theme_bw()
+
+def_plot <- ggplot(
+  data = Combined,
+  mapping = aes(
+    x = defense,
+    y = hp
+  ) 
+) +
+  geom_point(size = 2) +
+  labs(
+    x = "Defense",
+    y = "HP (health points)",
+    title = "Pokemon: Defense Strength vs. HP"
+  ) + theme_bw()
+
+combo_plot <- att_plot + def_plot
+print(combo_plot)
+```
+##Line graph of Pokemon ID vs their total sum of stats
+```{r}
+# Import the needed libraries
+library(readr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+
+# Import the file from its website
+pokemon.total <- read.csv("~/Documents/GitHub/Stat184-Course-Project-Spring2025/total-pokemon.csv")
+
+# Trim the data
+reducedFrame <- total.pokemon %>%
+  # Remove unwanted columns
+  select(-c("V6","V7","V8","V9","V10","V11")) %>%
+  # Remove unwanted rows
+  slice(-1) %>%
+  # Change the columns containing ID/Stat Sum into numeric values for further data processing
+  mutate(V1 = as.numeric(as.character(V1))) %>%
+  mutate(V5 = as.numeric(as.character(V5)))
+
+# Create the scatter plot of ID vs Sum of Stats
+ggplot(reducedFrame, aes(x = V1, y = V5)) +
+  geom_point(size = 1) +
+  # label the graph
+  labs(title = "Power over time",
+       x = "ID",
+       y = "Sum of Stats") + 
+  scale_x_continuous(breaks = seq(0, 900, by = 50), limits = c(0, 900)) +
+  scale_y_continuous(breaks = seq(0, 1200, by = 100), limits = c(0, 1200)) +
+  theme_minimal()
+```
+
