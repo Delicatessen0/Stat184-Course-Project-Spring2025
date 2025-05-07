@@ -130,7 +130,7 @@ library(tidyr)
 library(ggplot2)
 
 # Import the file from its website
-pokemon.total <- read.csv("~/Documents/GitHub//Stat184-Course-Project-Spring2025/total-pokemon.csv")
+pokemon.total <- read.csv("~/Documents/GitHub/Stat184-Course-Project-Spring2025/total-pokemon.csv")
 
 # Create the scatter plot of ID vs Sum of Stats
 ggplot(pokemon.total, aes(x = number, y = total)) +
