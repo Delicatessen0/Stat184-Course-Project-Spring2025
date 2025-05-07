@@ -89,6 +89,7 @@ print(stat_summary_combined)
 
 ## Combined scatterplot, with each point being a Pokemon, of attack/speed and defense/hp
 
+This dual scatterplot visualizes relationships between core combat stats. The left plot shows that high Attack and high Speed rarely coincide many Pokemon are strong but slow, or fast but weak. The right plot reveals a clearer correlation between Defense and HP: tankier Pokemon tend to have high values in both. These patterns support general gameplay assumptions, where glass cannon Pokemon sacrifice durability for power, and vice versa.
 
 ```{r}
 library(ggplot2)
@@ -127,6 +128,9 @@ combo_plot <- att_plot + def_plot
 print(combo_plot)
 ```
 ## Line graph of Pokemon ID vs their total sum of stats
+
+This line plot explores "power creep" over time by plotting each Pokemon’s total stats against its ID (which generally correlates with generation). While there is a wide range of stat totals across all IDs, there's a mild upward trend. This suggests that newer generations have introduced slightly stronger Pokemon, aligning with the community concern over increasing power levels.
+
 ```{r}
 # Import the needed libraries
 library(readr)
